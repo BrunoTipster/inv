@@ -1,0 +1,237 @@
+/**
+ * Estilos da Área do Cliente
+ * 
+ * @package InvestSystem
+ * @version 1.0.0
+ * @author Bruno Tipster
+ * @copyright 2025 InvestSystem
+ */
+
+/* Layout Principal */
+.client-wrapper {
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+/* Header */
+.client-header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    min-width: 200px;
+    display: none;
+}
+
+.user-menu:hover .user-dropdown {
+    display: block;
+}
+
+/* Dashboard Cards */
+.balance-card {
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.balance-title {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.balance-amount {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.investment-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.investment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Pacotes de Investimento */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.package-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.package-rate {
+    font-size: 2.5rem;
+    color: #1a237e;
+    margin: 15px 0;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.package-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Formulários */
+.form-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.form-title {
+    margin-bottom: 20px;
+    color: #1a237e;
+}
+
+/* Histórico de Transações */
+.transaction-list {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.transaction-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.deposit { background: rgba(40, 167, 69, 0.1); color: #28a745; }
+.withdrawal { background: rgba(220, 53, 69, 0.1); color: #dc3545; }
+
+/* Perfil */
+.profile-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Suporte */
+.support-ticket {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    transition: opacity 0.3s;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .balance-card {
+        margin-bottom: 15px;
+    }
+
+    .transaction-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .transaction-icon {
+        margin: 0 auto 10px;
+    }
+}

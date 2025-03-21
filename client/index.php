@@ -1,0 +1,1 @@
+<?php echo 'Página inicial do cliente'; ?>
